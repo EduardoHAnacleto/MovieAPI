@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TodoListAPI</name>
+    </assembly>
+    <members>
+        <member name="M:RandomAPI.Controllers.MovieController.AddMovie(TodoListAPI.Data.DTOs.CreateMovieDTO)">
+            <summary>
+            Add a movie to database
+            </summary>
+            <param name="movieDto">Object with the necessary camps for creation</param>
+            <returns>IActionResult</returns>
+            <response code="201">Case added with success</response>
+        </member>
+        <member name="M:RandomAPI.Controllers.MovieController.GetMovie(System.Int32,System.Int32)">
+            <summary>
+            Get movies from database
+            </summary>
+            <param name="skip">Integer for the number of rows to be skipped</param>
+            <param name="take">Integer for the number of rows to be taken</param>
+            <returns>IActionResult</returns>
+            <response code="200">Case request was successful</response>
+        </member>
+        <member name="M:RandomAPI.Controllers.MovieController.GetMovieById(System.Int32)">
+            <summary>
+            Get movies from database by using an integer ID
+            </summary>
+            <param name="id">Integer for the ID of the row selected to find</param>
+            <returns>IActionResult</returns>
+            <response code="200">Case request was successful</response>
+        </member>
+        <member name="M:RandomAPI.Controllers.MovieController.UpdateMovie(System.Int32,TodoListAPI.Data.DTOs.UpdateMovieDTO)">
+            <summary>
+            Update an item, saving to database
+            </summary>
+            <param name="id">Integer for the number of the row to be updated</param>
+            <param name="movieDTO">Object necessary for update</param>
+            <returns>IActionResult</returns>
+            <response code="204">Case update was successful</response>
+        </member>
+        <member name="M:RandomAPI.Controllers.MovieController.PatchMovie(System.Int32,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{TodoListAPI.Data.DTOs.UpdateMovieDTO})">
+            <summary>
+            Patch an item, saving to database
+            </summary>
+            <param name="id">Integer for the number of row to be patched</param>
+            <param name="patch">Variable to be patched</param>
+            <returns>IActionResult</returns>
+            <response code="204">Case patch was successful</response>
+        </member>
+        <member name="M:RandomAPI.Controllers.MovieController.DeleteMovie(System.Int32)">
+            <summary>
+            Delete movie from database
+            </summary>
+            <param name="id">Integer for the number of row to be deleted</param>
+            <returns>IActionResult</returns>
+            <response code="200">Case delete was successful</response>
+        </member>
+        <member name="T:TodoListAPI.Migrations.CreatingMovieTable">
+            <inheritdoc />
+        </member>
+        <member name="M:TodoListAPI.Migrations.CreatingMovieTable.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:TodoListAPI.Migrations.CreatingMovieTable.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:TodoListAPI.Migrations.CreatingMovieTable.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
